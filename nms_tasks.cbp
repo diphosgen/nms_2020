@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="nms_tasks" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/nms_tasks" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-Wnon-virtual-dtor" />
+					<Add option="-Winit-self" />
+					<Add option="-Wredundant-decls" />
+					<Add option="-Wcast-align" />
+					<Add option="-Wfloat-equal" />
+					<Add option="-Wunreachable-code" />
+					<Add option="-Wmissing-declarations" />
+					<Add option="-Wmissing-include-dirs" />
+					<Add option="-Wswitch-enum" />
+					<Add option="-Wswitch-default" />
+					<Add option="-Weffc++" />
+					<Add option="-Wzero-as-null-pointer-constant" />
+					<Add option="-Wmain" />
+					<Add option="-pedantic-errors" />
+					<Add option="-pedantic" />
+					<Add option="-Werror=vla" />
+					<Add option="-Wall" />
+					<Add option="-std=c++17" />
+					<Add option="-g" />
+					<Add option="-fconcepts" />
+					<Add directory="include" />
+					<Add directory="tasks/include" />
+					<Add directory="include/runge_kutta_methods" />
+				</Compiler>
+				<Linker>
+					<Add option="-static-libstdc++" />
+					<Add option="-static-libgcc" />
+					<Add option="-static" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/nms_tasks" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-march=bdver2" />
+					<Add option="-funroll-all-loops" />
+					<Add option="-fomit-frame-pointer" />
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-O3" />
+					<Add option="-Wnon-virtual-dtor" />
+					<Add option="-Winit-self" />
+					<Add option="-Wredundant-decls" />
+					<Add option="-Wcast-align" />
+					<Add option="-Wfloat-equal" />
+					<Add option="-Wunreachable-code" />
+					<Add option="-Wmissing-declarations" />
+					<Add option="-Wmissing-include-dirs" />
+					<Add option="-Wswitch-enum" />
+					<Add option="-Wswitch-default" />
+					<Add option="-Weffc++" />
+					<Add option="-Wzero-as-null-pointer-constant" />
+					<Add option="-Wmain" />
+					<Add option="-pedantic-errors" />
+					<Add option="-pedantic" />
+					<Add option="-Werror=vla" />
+					<Add option="-Wall" />
+					<Add option="-std=c++17" />
+					<Add option="-m64" />
+					<Add option="-fconcepts" />
+					<Add directory="include" />
+					<Add directory="tasks/include" />
+					<Add directory="include/runge_kutta_methods" />
+				</Compiler>
+				<Linker>
+					<Add option="-static-libstdc++" />
+					<Add option="-static-libgcc" />
+					<Add option="-static" />
+					<Add option="-m64" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="include/accuracy_sequence.hxx" />
+		<Unit filename="include/accuracy_sequence_factory.hxx" />
+		<Unit filename="include/basic_libs.hxx" />
+		<Unit filename="include/basic_math_functions.hxx" />
+		<Unit filename="include/boundary_conditions.hxx" />
+		<Unit filename="include/butcher_table.hxx" />
+		<Unit filename="include/heat_conduction_equation_1d.hxx" />
+		<Unit filename="include/heat_conduction_equation_2d.hxx" />
+		<Unit filename="include/matrix_fixed.hxx" />
+		<Unit filename="include/matrix_unfixed.hxx" />
+		<Unit filename="include/one_step_ode_solver.hxx" />
+		<Unit filename="include/random.hxx" />
+		<Unit filename="include/regular_grid_1d.hxx" />
+		<Unit filename="include/regular_grid_2d.hxx" />
+		<Unit filename="include/regular_grid_3d.hxx" />
+		<Unit filename="include/richardson_extrapolation.hxx" />
+		<Unit filename="include/runge_kutta_method.hxx" />
+		<Unit filename="include/runge_kutta_method_expl.hxx" />
+		<Unit filename="include/runge_kutta_method_impl.hxx" />
+		<Unit filename="include/runge_kutta_method_lib.hxx" />
+		<Unit filename="include/runge_kutta_methods/backward_euler_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/ceschino_kunzmann_fifth_order_dirk.hxx" />
+		<Unit filename="include/runge_kutta_methods/ceschino_kunzmann_third_order_dirk.hxx" />
+		<Unit filename="include/runge_kutta_methods/classic_fourth_order_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/classic_three_eighths_rule_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/crouzeix_third_order_dirk.hxx" />
+		<Unit filename="include/runge_kutta_methods/dormand_prince_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/explicit_bogacki_shampine_third_order_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/explicit_cash_karp_fifth_order_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/explicit_fehlberg_second_order_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/explicit_generic_second_order_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/explicit_generic_third_order_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/explicit_heun_second_order_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/explicit_heun_third_order_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/explicit_kutta_third_order_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/explicit_midpoint_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/explicit_ralston_fourth_order_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/explicit_ralston_second_order_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/explicit_ralston_third_order_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/explicit_runge_kutta_fehlberg_fifth_order_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/explicit_ssprk3_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/forward_euler_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/gauss_legendre_fourth_order_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/gauss_legendre_sixth_order_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/implicit_crank_nicolson_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/implicit_midpoint_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/lobatto_IIIA_eighth_order_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/lobatto_IIIA_fourth_order_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/lobatto_IIIA_second_order_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/lobatto_IIIA_sixth_order_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/lobatto_IIIB_eighth_order_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/lobatto_IIIB_fourth_order_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/lobatto_IIIB_second_order_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/lobatto_IIIB_sixth_order_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/lobatto_IIIC_eighth_order_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/lobatto_IIIC_fourth_order_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/lobatto_IIIC_second_order_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/lobatto_IIIC_sixth_order_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/lobatto_IIINW_fourth_order_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/lobatto_IIINW_second_order_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/norsett_fourth_order_dirk.hxx" />
+		<Unit filename="include/runge_kutta_methods/norsett_third_order_dirk.hxx" />
+		<Unit filename="include/runge_kutta_methods/pareschi_russo_second_order_dirk.hxx" />
+		<Unit filename="include/runge_kutta_methods/qin_zhang_symplectic_second_order_dirk.hxx" />
+		<Unit filename="include/runge_kutta_methods/radau_IA_fifth_order_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/radau_IA_third_order_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/radau_IIA_fifth_order_method.hxx" />
+		<Unit filename="include/runge_kutta_methods/radau_IIA_third_order_method.hxx" />
+		<Unit filename="include/series_acceleration_method.hxx" />
+		<Unit filename="include/slae_solver.hxx" />
+		<Unit filename="include/slae_solver_factory.hxx" />
+		<Unit filename="include/slae_solver_gauss.hxx" />
+		<Unit filename="include/snae_solver.hxx" />
+		<Unit filename="include/snae_solver_factory.hxx" />
+		<Unit filename="include/snae_solver_fpi.hxx" />
+		<Unit filename="include/vector_fixed.hxx" />
+		<Unit filename="include/vector_unfixed.hxx" />
+		<Unit filename="include/wave_equation_1d.hxx" />
+		<Unit filename="include/wave_equation_2d.hxx" />
+		<Unit filename="main_tasks.cpp" />
+		<Unit filename="tasks/include/task_heat_conduction_equation.hxx" />
+		<Unit filename="tasks/include/task_ode_system_solution.hxx" />
+		<Unit filename="tasks/include/task_poisson_equation.hxx" />
+		<Unit filename="tasks/include/task_wave_equation.hxx" />
+		<Unit filename="tasks/include/tasks.hxx" />
+		<Unit filename="tasks/src/task_heat_conduction_equation.cxx" />
+		<Unit filename="tasks/src/task_ode_system_solution.cxx" />
+		<Unit filename="tasks/src/task_poisson_equation.cxx" />
+		<Unit filename="tasks/src/task_wave_equation.cxx" />
+		<Unit filename="tasks/src/tasks.cxx" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
