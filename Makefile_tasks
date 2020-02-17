@@ -30,12 +30,12 @@ DEP_DEBUG =
 OUT_DEBUG = bin/Debug/nms_tasks
 
 INC_RELEASE = $(INC) -Iinclude -Itasks/include -Iinclude/runge_kutta_methods
-CFLAGS_RELEASE = $(CFLAGS) -fomit-frame-pointer -fexpensive-optimizations -O3 -Wnon-virtual-dtor -Winit-self -Wredundant-decls -Wcast-align -Wfloat-equal -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wzero-as-null-pointer-constant -Wmain -pedantic-errors -pedantic -Wall -std=c++17 -m64 -funroll-all-loops -Werror=vla -fconcepts
+CFLAGS_RELEASE = $(CFLAGS) -fomit-frame-pointer -fexpensive-optimizations -O3 -Wnon-virtual-dtor -Winit-self -Wredundant-decls -Wcast-align -Wfloat-equal -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wzero-as-null-pointer-constant -Wmain -pedantic-errors -pedantic -Wall -std=c++17 -funroll-all-loops -Werror=vla -fconcepts
 RESINC_RELEASE = $(RESINC)
 RCFLAGS_RELEASE = $(RCFLAGS)
 LIBDIR_RELEASE = $(LIBDIR)
 LIB_RELEASE = $(LIB)
-LDFLAGS_RELEASE = $(LDFLAGS) -m64 -static-libstdc++ -static-libgcc -static
+LDFLAGS_RELEASE = $(LDFLAGS) -static-libstdc++ -static-libgcc -static
 OBJDIR_RELEASE = obj/Release
 DEP_RELEASE = 
 OUT_RELEASE = bin/Release/nms_tasks

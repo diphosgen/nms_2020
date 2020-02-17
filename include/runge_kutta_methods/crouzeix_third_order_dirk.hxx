@@ -16,7 +16,7 @@ class Crouzeix_third_order_DIRK
 {
 public:
 
-    constexpr Crouzeix_third_order_DIRK(const T_arg_t& x = 1.0 + std::sqrt(2.0)/2.0) noexcept
+    constexpr Crouzeix_third_order_DIRK() noexcept
         :   Runge_Kutta_method_impl<2, T_arg_u, T_arg_t>{
                     {3}, {
                         {{

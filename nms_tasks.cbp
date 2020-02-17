@@ -68,7 +68,6 @@
 					<Add option="-pedantic" />
 					<Add option="-Wall" />
 					<Add option="-std=c++17" />
-					<Add option="-m64" />
 					<Add option="-funroll-all-loops" />
 					<Add option="-Werror=vla" />
 					<Add option="-fconcepts" />
@@ -77,7 +76,6 @@
 					<Add directory="include/runge_kutta_methods" />
 				</Compiler>
 				<Linker>
-					<Add option="-m64" />
 					<Add option="-static-libstdc++" />
 					<Add option="-static-libgcc" />
 					<Add option="-static" />
