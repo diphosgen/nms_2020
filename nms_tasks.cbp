@@ -27,10 +27,10 @@
 					<Add option="-Wmain" />
 					<Add option="-pedantic-errors" />
 					<Add option="-pedantic" />
-					<Add option="-Werror=vla" />
 					<Add option="-Wall" />
 					<Add option="-std=c++17" />
 					<Add option="-g" />
+					<Add option="-Werror=vla" />
 					<Add option="-fconcepts" />
 					<Add directory="include" />
 					<Add directory="tasks/include" />
@@ -48,8 +48,6 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
-					<Add option="-march=bdver2" />
-					<Add option="-funroll-all-loops" />
 					<Add option="-fomit-frame-pointer" />
 					<Add option="-fexpensive-optimizations" />
 					<Add option="-O3" />
@@ -68,20 +66,21 @@
 					<Add option="-Wmain" />
 					<Add option="-pedantic-errors" />
 					<Add option="-pedantic" />
-					<Add option="-Werror=vla" />
 					<Add option="-Wall" />
 					<Add option="-std=c++17" />
 					<Add option="-m64" />
+					<Add option="-funroll-all-loops" />
+					<Add option="-Werror=vla" />
 					<Add option="-fconcepts" />
 					<Add directory="include" />
 					<Add directory="tasks/include" />
 					<Add directory="include/runge_kutta_methods" />
 				</Compiler>
 				<Linker>
+					<Add option="-m64" />
 					<Add option="-static-libstdc++" />
 					<Add option="-static-libgcc" />
 					<Add option="-static" />
-					<Add option="-m64" />
 				</Linker>
 			</Target>
 		</Build>

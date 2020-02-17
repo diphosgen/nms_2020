@@ -27,10 +27,10 @@
 					<Add option="-Wmain" />
 					<Add option="-pedantic-errors" />
 					<Add option="-pedantic" />
-					<Add option="-Werror=vla" />
 					<Add option="-Wall" />
 					<Add option="-std=c++17" />
 					<Add option="-g" />
+					<Add option="-Werror=vla" />
 					<Add option="-fconcepts" />
 					<Add directory="include" />
 					<Add directory="tests/include" />

@@ -34,7 +34,7 @@ void harmonic_oscillator_solution() noexcept
         [frequency](const T_arg& u, const double t)
         constexpr noexcept -> T_arg
     {
-        constexpr double frequency_sqr = frequency * frequency;
+        const double frequency_sqr = frequency * frequency;
         return {{u[1], -frequency_sqr * u[0]}};
     };
 
@@ -119,7 +119,7 @@ void individual_ode_system_solution() noexcept
         [frequency](const T_arg& u, const double t)
         constexpr noexcept -> T_arg
     {
-        constexpr double frequency_sqr = frequency * frequency;
+        const double frequency_sqr = frequency * frequency;
         return {{u[1], -frequency_sqr * u[0]}};
     };
 
