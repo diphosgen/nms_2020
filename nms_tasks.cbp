@@ -71,6 +71,7 @@
 					<Add option="-funroll-all-loops" />
 					<Add option="-Werror=vla" />
 					<Add option="-fconcepts" />
+					<Add option="-DNDEBUG" />
 					<Add directory="include" />
 					<Add directory="tasks/include" />
 					<Add directory="include/runge_kutta_methods" />
