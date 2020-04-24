@@ -86,20 +86,22 @@ public:
                 }
             }
 
+            using std::swap;
+
             if (row != row_max) {
                 for (int col_local = row; col_local < system_size; ++col_local) {
-                    std::swap(matrix_system[row][col_local],matrix_system[row_max][col_local]);
+                    swap(matrix_system[row][col_local],matrix_system[row_max][col_local]);
                 }
 
-                std::swap(vector_system_ptr[row],vector_system_ptr[row_max]);
+                swap(vector_system_ptr[row],vector_system_ptr[row_max]);
             }
 
             if (row != col_max) {
                 for (int row_local = 0; row_local < system_size; ++row_local) {
-                    std::swap(matrix_system[row_local][row],matrix_system[row_local][col_max]);
+                    swap(matrix_system[row_local][row],matrix_system[row_local][col_max]);
                 }
 
-                std::swap(index_ptr[row],index_ptr[col_max]);
+                swap(index_ptr[row],index_ptr[col_max]);
             }
 
             for (int row_local = row + 1; row_local < system_size; ++row_local) {
