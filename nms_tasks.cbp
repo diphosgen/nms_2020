@@ -62,7 +62,6 @@
 					<Add option="-Wformat-signedness" />
 					<Add option="-Wmissing-braces" />
 					<Add option="-Wsequence-point" />
-					<Add option="-Wstrict-aliasing=2" />
 					<Add option="-Wwrite-strings" />
 					<Add option="-Wmissing-format-attribute" />
 					<Add option="-Wnormalized=nfkc" />
@@ -119,10 +118,6 @@
 					<Add option="-fdiagnostics-show-option" />
 					<Add option="-Wno-div-by-zero" />
 					<Add option="-Wuninitialized" />
-					<Add option="-Werror=vla" />
-					<Add option="-fdiagnostics-show-option" />
-					<Add option="-Wno-div-by-zero" />
-					<Add option="-Wuninitialized" />
 					<Add option="-Wstack-protector" />
 					<Add option="-Wtype-limits" />
 					<Add option="-Wimplicit-fallthrough" />
@@ -149,7 +144,6 @@
 					<Add option="-Wformat-signedness" />
 					<Add option="-Wmissing-braces" />
 					<Add option="-Wsequence-point" />
-					<Add option="-Wstrict-aliasing=2" />
 					<Add option="-Wwrite-strings" />
 					<Add option="-Wmissing-format-attribute" />
 					<Add option="-Wnormalized=nfkc" />
