@@ -19,28 +19,23 @@ class Richardson_extrapolation
 private:
 
     using Ode_solver_ptr_t =
-        std::experimental::propagate_const<
-            std::unique_ptr<One_step_ODE_solver<T_arg_u, T_arg_t>>
-            >;
+            std::unique_ptr<One_step_ODE_solver<T_arg_u, T_arg_t>>;
 
     using Accuracy_sequence_t =
-        std::experimental::propagate_const<
-            std::unique_ptr<Accuracy_sequence>
-            >;
+            std::unique_ptr<Accuracy_sequence>;
 
     using Slae_solver_ptr_t =
-        std::experimental::propagate_const<
             std::unique_ptr<SLAE_solver<
                 Matrix_unfixed<T_arg_t>,
                 Vector_unfixed<T_arg_u>>
-                >>;
+                >;
 
 private:
 
     Ode_solver_ptr_t ode_solver_ptr = nullptr;
-    const int accuracy_order_boost = 0;
-    const Accuracy_sequence_t accuracy_sequence = nullptr;
-    const Slae_solver_ptr_t slae_solver_ptr = nullptr;
+    int accuracy_order_boost = 0;
+    Accuracy_sequence_t accuracy_sequence = nullptr;
+    Slae_solver_ptr_t slae_solver_ptr = nullptr;
 
 public:
 
@@ -49,7 +44,7 @@ public:
     constexpr Richardson_extrapolation(const Richardson_extrapolation<T_arg_u, T_arg_t>&) noexcept = default;
     constexpr Richardson_extrapolation(Richardson_extrapolation<T_arg_u, T_arg_t>&&) noexcept = default;
 
-    constexpr Richardson_extrapolation(Ode_solver_ptr_t ode_solver_ptr,
+    Richardson_extrapolation(Ode_solver_ptr_t ode_solver_ptr,
                                        const int accuracy_order_boost,
                                        Accuracy_sequence_t accuracy_sequence =
                                             Accuracy_sequence_default_factory{}.create(),
@@ -68,10 +63,10 @@ public:
 
     virtual ~Richardson_extrapolation() noexcept = default;
 
-    constexpr Richardson_extrapolation<T_arg_u, T_arg_t>&
+    Richardson_extrapolation<T_arg_u, T_arg_t>&
         operator=(const Richardson_extrapolation<T_arg_u, T_arg_t>&) noexcept = default;
 
-    constexpr Richardson_extrapolation<T_arg_u, T_arg_t>&
+    Richardson_extrapolation<T_arg_u, T_arg_t>&
         operator=(Richardson_extrapolation<T_arg_u, T_arg_t>&&) noexcept = default;
 
     virtual int get_accuracy_order() const noexcept override

@@ -19,10 +19,10 @@ public:
 
     virtual ~SNAE_solver_factory() noexcept = default;
 
-	constexpr SNAE_solver_factory<T_args>&
+	SNAE_solver_factory<T_args>&
 		operator=(const SNAE_solver_factory<T_args>&) noexcept = default;
 
-	constexpr SNAE_solver_factory<T_args>&
+	SNAE_solver_factory<T_args>&
 		operator=(SNAE_solver_factory<T_args>&&) noexcept = default;
 
     virtual std::unique_ptr<SNAE_solver<T_args>> create() const noexcept = 0;
@@ -42,10 +42,10 @@ public:
 
     virtual ~SNAE_solver_default_factory() noexcept = default;
 
-	constexpr SNAE_solver_default_factory<T_args>&
+	SNAE_solver_default_factory<T_args>&
 		operator=(const SNAE_solver_default_factory<T_args>&) noexcept = default;
 
-	constexpr SNAE_solver_default_factory<T_args>&
+	SNAE_solver_default_factory<T_args>&
 		operator=(SNAE_solver_default_factory<T_args>&&) noexcept = default;
 
     virtual std::unique_ptr<SNAE_solver<T_args>> create() const noexcept

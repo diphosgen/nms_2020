@@ -18,8 +18,8 @@ public:
 
     virtual ~Accuracy_sequence() noexcept = default;
 
-    constexpr Accuracy_sequence& operator=(const Accuracy_sequence&) noexcept = default;
-    constexpr Accuracy_sequence& operator=(Accuracy_sequence&&) noexcept = default;
+    Accuracy_sequence& operator=(const Accuracy_sequence&) noexcept = default;
+    Accuracy_sequence& operator=(Accuracy_sequence&&) noexcept = default;
 
     virtual int get_sequence_element(const int number) const noexcept = 0;
 };
@@ -36,8 +36,8 @@ public:
 
     virtual ~Richardson_sequence() noexcept = default;
 
-    constexpr Richardson_sequence& operator=(const Richardson_sequence&) noexcept = default;
-    constexpr Richardson_sequence& operator=(Richardson_sequence&&) noexcept = default;
+    Richardson_sequence& operator=(const Richardson_sequence&) noexcept = default;
+    Richardson_sequence& operator=(Richardson_sequence&&) noexcept = default;
 
     virtual int get_sequence_element(const int number) const noexcept override
     {
@@ -57,8 +57,8 @@ public:
 
     virtual ~Romberg_sequence() noexcept = default;
 
-    constexpr Romberg_sequence& operator=(const Romberg_sequence&) noexcept = default;
-    constexpr Romberg_sequence& operator=(Romberg_sequence&&) noexcept = default;
+    Romberg_sequence& operator=(const Romberg_sequence&) noexcept = default;
+    Romberg_sequence& operator=(Romberg_sequence&&) noexcept = default;
 
     virtual int get_sequence_element(const int number) const noexcept override
     {

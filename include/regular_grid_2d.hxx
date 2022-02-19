@@ -291,12 +291,6 @@ public:
 
     ~Index_proxy_variable() noexcept = default;
 
-    constexpr Index_proxy_variable&
-		operator=(const Index_proxy_variable&) noexcept = default;
-
-    constexpr Index_proxy_variable&
-		operator=(Index_proxy_variable&&) noexcept = default;
-
     constexpr T& operator[](const int y_node_number) noexcept
     {
         assert(y_node_number >= 0 && y_node_number < this->grid.size_y);
@@ -330,12 +324,6 @@ public:
     }
 
     ~Index_proxy_constant() noexcept = default;
-
-    constexpr Index_proxy_constant&
-		operator=(const Index_proxy_constant&) noexcept = default;
-
-    constexpr Index_proxy_constant&
-		operator=(Index_proxy_constant&&) noexcept = default;
 
     constexpr const T& operator[](const int y_node_number) const noexcept
     {

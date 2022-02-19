@@ -26,10 +26,10 @@ public:
 
     virtual ~One_step_ODE_solver() noexcept = default;
 
-    constexpr One_step_ODE_solver<T_arg_u, T_arg_t>&
+    One_step_ODE_solver<T_arg_u, T_arg_t>&
         operator=(const One_step_ODE_solver<T_arg_u, T_arg_t>&) noexcept = default;
 
-    constexpr One_step_ODE_solver<T_arg_u, T_arg_t>&
+    One_step_ODE_solver<T_arg_u, T_arg_t>&
         operator=(One_step_ODE_solver<T_arg_u, T_arg_t>&&) noexcept = default;
 
     virtual int get_accuracy_order() const noexcept

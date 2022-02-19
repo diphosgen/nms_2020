@@ -19,8 +19,8 @@ public:
 
     virtual ~SNAE_solver() noexcept = default;
 
-    constexpr SNAE_solver<T_args>& operator=(const SNAE_solver<T_args>&) noexcept = default;
-    constexpr SNAE_solver<T_args>& operator=(SNAE_solver<T_args>&&) noexcept = default;
+    SNAE_solver<T_args>& operator=(const SNAE_solver<T_args>&) noexcept = default;
+    SNAE_solver<T_args>& operator=(SNAE_solver<T_args>&&) noexcept = default;
 
     virtual T_args get_solution(const std::function<T_args(T_args)>& solve_function,
                                 const T_args& initial_value) const = 0;

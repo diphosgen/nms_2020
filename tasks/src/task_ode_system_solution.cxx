@@ -31,21 +31,21 @@ void harmonic_oscillator_solution() noexcept
     constexpr int accuracy_order_boost = 5;
 
     auto ode_system =
-        [frequency](const T_arg& u, const double t)
-        constexpr noexcept -> T_arg
+        [frequency](const T_arg& u, [[maybe_unused]] const double t)
+        noexcept -> T_arg
     {
         const double frequency_sqr = frequency * frequency;
         return {{u[1], -frequency_sqr * u[0]}};
     };
 
     auto initial_conditions = [frequency]()
-        constexpr noexcept -> T_arg
+        noexcept -> T_arg
     {
         return {{1.0, 0.0}};
     };
 
     auto exact_solution = [frequency](const double t)
-        constexpr noexcept -> T_arg
+        noexcept -> T_arg
     {
         return {{std::cos(frequency * t), -std::sin(frequency * t)}};
     };
@@ -116,15 +116,15 @@ void individual_ode_system_solution() noexcept
     constexpr int accuracy_order_boost = 5;
 
     auto individual_ode_system =
-        [frequency](const T_arg& u, const double t)
-        constexpr noexcept -> T_arg
+        [frequency](const T_arg& u, [[maybe_unused]] const double t)
+        noexcept -> T_arg
     {
         const double frequency_sqr = frequency * frequency;
         return {{u[1], -frequency_sqr * u[0]}};
     };
 
     auto initial_conditions = [frequency]()
-        constexpr noexcept -> T_arg
+        noexcept -> T_arg
     {
         return {{1.0, 0.0}};
     };

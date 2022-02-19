@@ -20,10 +20,10 @@ public:
     constexpr SLAE_solver_Gauss(const SLAE_solver_Gauss<Matrix_type, Vector_type>&) noexcept = default;
     constexpr SLAE_solver_Gauss(SLAE_solver_Gauss<Matrix_type, Vector_type>&&) noexcept = default;
 
-    constexpr SLAE_solver_Gauss<Matrix_type, Vector_type>&
+    SLAE_solver_Gauss<Matrix_type, Vector_type>&
         operator=(const SLAE_solver_Gauss<Matrix_type, Vector_type>&) noexcept = default;
 
-    constexpr SLAE_solver_Gauss<Matrix_type, Vector_type>&
+    SLAE_solver_Gauss<Matrix_type, Vector_type>&
         operator=(SLAE_solver_Gauss<Matrix_type, Vector_type>&&) noexcept = default;
 
     virtual ~SLAE_solver_Gauss() noexcept = default;

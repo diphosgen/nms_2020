@@ -68,10 +68,10 @@ public:
 
     ~Heat_conduction_equation_1d() noexcept = default;
 
-    constexpr Heat_conduction_equation_1d& operator=
+    Heat_conduction_equation_1d& operator=
         (const Heat_conduction_equation_1d<lbc, rbc, T>&) noexcept = default;
 
-    constexpr Heat_conduction_equation_1d& operator=
+    Heat_conduction_equation_1d& operator=
         (Heat_conduction_equation_1d<lbc, rbc, T>&&) noexcept = default;
 
     Regular_grid_1d<T> get_initial_conditions_grid() const noexcept
@@ -107,22 +107,22 @@ public:
 
 private:
 
-    const Initial_conditions_function init_conditions{};
+    Initial_conditions_function init_conditions{};
 
-    const Function_lbc function_lbc{};
-    const Function_rbc function_rbc{};
+    Function_lbc function_lbc{};
+    Function_rbc function_rbc{};
 
-    const Source_function source{};
+    Source_function source{};
 
-    const int grid_steps_amount = 0;
-    const int grid_nodes_amount{};
+    int grid_steps_amount = 0;
+    int grid_nodes_amount{};
 
-    const T lbc_coordinate = T(0.0);
-    const T rbc_coordinate = T(1.0);
+    T lbc_coordinate = T(0.0);
+    T rbc_coordinate = T(1.0);
 
-    const T grid_spatial_step{};
+    T grid_spatial_step{};
 
-    const T thermal_diffusivity = T(1.0);
+    T thermal_diffusivity = T(1.0);
 
     Regular_grid_1d<T> get_rhs_ode_system
         (const Regular_grid_1d<T>& grid_solution, const T& t) const noexcept

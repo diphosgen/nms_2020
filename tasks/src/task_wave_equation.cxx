@@ -53,23 +53,23 @@ void wave_equation_1D_solution() noexcept
     using RK_method = Classic_fourth_order_method<Regular_grid_1d<Grid_variable>, double>;
     using Refined_method = Richardson_extrapolation<Regular_grid_1d<Grid_variable>, double>;
 
-    auto init_conditions = [](const double x)
+    auto init_conditions = []([[maybe_unused]] const double x)
         noexcept -> Grid_variable
     {
         return {{std::sin(M_PI * x / coordinate_length), 0.0}};
     };
 
-    auto function_lbc = [](const double t) noexcept -> double
+    auto function_lbc = []([[maybe_unused]] const double t) noexcept -> double
     {
         return 0.0;
     };
 
-    auto function_rbc = [](const double t) noexcept -> double
+    auto function_rbc = []([[maybe_unused]] const double t) noexcept -> double
     {
         return 0.0;
     };
 
-    auto source = [](const double x, const double t) noexcept -> double
+    auto source = []([[maybe_unused]] const double x, [[maybe_unused]] const double t) noexcept -> double
     {
         return 0.0;
     };
@@ -177,7 +177,7 @@ void wave_equation_2D_solution() noexcept
     using RK_method = Classic_fourth_order_method<Regular_grid_2d<Grid_variable>, double>;
     using Refined_method = Richardson_extrapolation<Regular_grid_2d<Grid_variable>, double>;
 
-    auto init_conditions = [](const double x, const double y)
+    auto init_conditions = []([[maybe_unused]] const double x, [[maybe_unused]] const double y)
         noexcept -> Grid_variable
     {
         return {{
@@ -187,27 +187,27 @@ void wave_equation_2D_solution() noexcept
                }};
     };
 
-    auto function_lbc_x = [](const double y, const double t) noexcept -> double
+    auto function_lbc_x = []([[maybe_unused]] const double y, [[maybe_unused]] const double t) noexcept -> double
     {
         return 0.0;
     };
 
-    auto function_rbc_x = [](const double y, const double t) noexcept -> double
+    auto function_rbc_x = []([[maybe_unused]] const double y, [[maybe_unused]] const double t) noexcept -> double
     {
         return 0.0;
     };
 
-    auto function_lbc_y = [](const double x, const double t) noexcept -> double
+    auto function_lbc_y = []([[maybe_unused]] const double x, [[maybe_unused]] const double t) noexcept -> double
     {
         return 0.0;
     };
 
-    auto function_rbc_y = [](const double x, const double t) noexcept -> double
+    auto function_rbc_y = []([[maybe_unused]] const double x, [[maybe_unused]] const double t) noexcept -> double
     {
         return 0.0;
     };
 
-    auto source = [](const double x, const double y, const double t) noexcept -> double
+    auto source = []([[maybe_unused]] const double x, [[maybe_unused]] const double y, [[maybe_unused]] const double t) noexcept -> double
     {
         return 0.0;
     };

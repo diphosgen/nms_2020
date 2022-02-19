@@ -24,7 +24,7 @@ static void test_SNAE_solver_FPI_1() noexcept
 
     using namespace Math_structures;
 
-    auto snae_func = [](const double& x) constexpr -> double {
+    auto snae_func = [](const double& x)  -> double {
         return sin(x) - 0.5;
     };
 

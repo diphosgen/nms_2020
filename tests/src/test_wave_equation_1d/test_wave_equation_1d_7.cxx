@@ -37,14 +37,14 @@ void test_wave_equation_1D_7() noexcept
     constexpr Boundary_conditions rbc = Boundary_conditions::Dirichlet;
 
     auto eigenvalue_harmonic_factor = [](const int harmonic_number)
-        constexpr noexcept -> double
+        noexcept -> double
     {
         return double(harmonic_number) + 0.5;
     };
 
     auto basis_function = [coordinate_length,&eigenvalue_harmonic_factor]
                           (const double x, const int harmonic_number)
-        constexpr noexcept -> double
+        noexcept -> double
     {
         return std::cos(M_PI * eigenvalue_harmonic_factor(harmonic_number) * x / coordinate_length);
     };
@@ -90,22 +90,22 @@ void test_wave_equation_1D_7() noexcept
         return res;
     };
 
-    auto function_lbc_m = [](const double t) noexcept -> double
+    auto function_lbc_m = []([[maybe_unused]] const double t) noexcept -> double
     {
         return 0.0;
     };
 
-    auto function_lbc_c = [](const double t) noexcept -> double
+    auto function_lbc_c = []([[maybe_unused]] const double t) noexcept -> double
     {
         return 0.0;
     };
 
-    auto function_rbc = [](const double t) noexcept -> double
+    auto function_rbc = []([[maybe_unused]] const double t) noexcept -> double
     {
         return 0.0;
     };
 
-    auto source = [](const double x, const double t) noexcept -> double
+    auto source = []([[maybe_unused]] const double x, [[maybe_unused]] const double t) noexcept -> double
     {
         return 0.0;
     };

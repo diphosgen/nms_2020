@@ -292,12 +292,6 @@ public:
 
     ~Index_proxy_variable() noexcept = default;
 
-    constexpr Index_proxy_variable&
-		operator=(const Index_proxy_variable&) noexcept = default;
-
-    constexpr Index_proxy_variable&
-		operator=(Index_proxy_variable&&) noexcept = default;
-
     constexpr T& operator[](const int col_number) noexcept
     {
         assert(col_number >= 0 && col_number < this->matrix.cols_amount);
@@ -341,12 +335,6 @@ public:
     }
 
     ~Index_proxy_constant() noexcept = default;
-
-    constexpr Index_proxy_constant&
-		operator=(const Index_proxy_constant&) noexcept = default;
-
-    constexpr Index_proxy_constant&
-		operator=(Index_proxy_constant&&) noexcept = default;
 
     constexpr const T& operator[](const int col_number) const noexcept
     {
@@ -536,6 +524,7 @@ constexpr Matrix_unfixed<decltype(std::declval<T_lhs>() *
     const int rows_amount_lhs = lhs.get_rows_amount();
     const int cols_amount_lhs = lhs.get_cols_amount();
 
+    [[maybe_unused]]
     const int rows_amount_rhs = rhs.get_rows_amount();
     const int cols_amount_rhs = rhs.get_cols_amount();
 
@@ -574,8 +563,8 @@ constexpr Vector_unfixed<decltype(std::declval<T_lhs>() *
     using res_type = decltype(std::declval<T_lhs>() *
                               std::declval<T_rhs>());
 
-    const int rows_amount_lhs = lhs.get_rows_amount();
-    const int cols_amount_lhs = lhs.get_cols_amount();
+    [[maybe_unused]] const int rows_amount_lhs = lhs.get_rows_amount();
+    [[maybe_unused]] const int cols_amount_lhs = lhs.get_cols_amount();
 
     const int vector_size = rhs.size();
 

@@ -17,10 +17,10 @@ public:
 
     virtual ~Accuracy_sequence_factory() noexcept = default;
 
-	constexpr Accuracy_sequence_factory&
+	Accuracy_sequence_factory&
 		operator=(const Accuracy_sequence_factory&) noexcept = default;
 
-	constexpr Accuracy_sequence_factory&
+	Accuracy_sequence_factory&
 		operator=(Accuracy_sequence_factory&&) noexcept = default;
 
     virtual std::unique_ptr<Accuracy_sequence> create() const noexcept = 0;
@@ -39,10 +39,10 @@ public:
 
     virtual ~Accuracy_sequence_default_factory() noexcept = default;
 
-	constexpr Accuracy_sequence_default_factory&
+	Accuracy_sequence_default_factory&
 		operator=(const Accuracy_sequence_default_factory&) noexcept = default;
 
-	constexpr Accuracy_sequence_default_factory&
+	Accuracy_sequence_default_factory&
 		operator=(Accuracy_sequence_default_factory&&) noexcept = default;
 
     virtual std::unique_ptr<Accuracy_sequence> create() const noexcept

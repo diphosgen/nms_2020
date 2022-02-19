@@ -22,10 +22,10 @@ public:
 
     virtual ~SLAE_solver_factory() noexcept = default;
 
-	constexpr SLAE_solver_factory<Matrix_type, Vector_type>&
+	SLAE_solver_factory<Matrix_type, Vector_type>&
 		operator=(const SLAE_solver_factory<Matrix_type, Vector_type>&) noexcept = default;
 
-	constexpr SLAE_solver_factory<Matrix_type, Vector_type>&
+	SLAE_solver_factory<Matrix_type, Vector_type>&
 		operator=(SLAE_solver_factory<Matrix_type, Vector_type>&&) noexcept = default;
 
     virtual std::unique_ptr<SLAE_solver<Matrix_type, Vector_type>> create() const noexcept = 0;
@@ -51,10 +51,10 @@ public:
 
     virtual ~SLAE_solver_default_factory() noexcept = default;
 
-	constexpr SLAE_solver_default_factory<Matrix_type, Vector_type>&
+	SLAE_solver_default_factory<Matrix_type, Vector_type>&
 		operator=(const SLAE_solver_default_factory<Matrix_type, Vector_type>&) noexcept = default;
 
-	constexpr SLAE_solver_default_factory<Matrix_type, Vector_type>&
+	SLAE_solver_default_factory<Matrix_type, Vector_type>&
 		operator=(SLAE_solver_default_factory<Matrix_type, Vector_type>&&) noexcept = default;
 
     virtual std::unique_ptr<SLAE_solver<Matrix_type, Vector_type>> create() const noexcept

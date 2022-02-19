@@ -39,14 +39,14 @@ void test_heat_conduction_equation_1D_5() noexcept
     constexpr Boundary_conditions rbc = Boundary_conditions::Dirichlet;
 
     auto eigenvalue_harmonic_factor = [](const int harmonic_number)
-        constexpr noexcept -> double
+        noexcept -> double
     {
         return double(harmonic_number);
     };
 
     auto basis_function = [coordinate_length,&eigenvalue_harmonic_factor]
                           (const double x, const int harmonic_number)
-        constexpr noexcept -> double
+        noexcept -> double
     {
         return std::sin(M_PI * eigenvalue_harmonic_factor(harmonic_number) * x / coordinate_length);
     };
@@ -80,17 +80,17 @@ void test_heat_conduction_equation_1D_5() noexcept
         return res;
     };
 
-    auto function_lbc = [](const double t) noexcept -> double
+    auto function_lbc = []([[maybe_unused]] const double t) noexcept -> double
     {
         return 10.0;
     };
 
-    auto function_rbc = [](const double t) noexcept -> double
+    auto function_rbc = []([[maybe_unused]] const double t) noexcept -> double
     {
         return 5.0;
     };
 
-    auto source = [](const double x, const double t) noexcept -> double
+    auto source = []([[maybe_unused]] const double x, [[maybe_unused]] const double t) noexcept -> double
     {
         return 0.0;
     };

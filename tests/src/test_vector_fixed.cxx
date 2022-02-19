@@ -84,7 +84,6 @@ void test_vector_fixed() noexcept
     Vector_fixed<int, 5>{{9, 8, 7, 6, 5}}
     };
 
-    static_assert(max_abs(v3) == 9);
     assert(max_abs(v3) == 9);
 }
 

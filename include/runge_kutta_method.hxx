@@ -21,7 +21,7 @@ protected:
     Vector_fixed<T_arg_u, stages_amount> rkm_increments_k =
         Vector_fixed<T_arg_u, stages_amount>{};
 
-    const Butcher_table<stages_amount, T_arg_t> butcher_table{};
+    Butcher_table<stages_amount, T_arg_t> butcher_table{};
 
     virtual void make_increments_calculation(const std::function<T_arg_u(T_arg_u, T_arg_t)>& f_rhs,
                                              const T_arg_u& u_prev, const T_arg_t& t, const T_arg_t& dt) = 0;
@@ -63,10 +63,10 @@ public:
 
     virtual ~Runge_Kutta_method() noexcept = default;
 
-    constexpr Runge_Kutta_method<stages_amount, T_arg_u, T_arg_t>&
+    Runge_Kutta_method<stages_amount, T_arg_u, T_arg_t>&
         operator=(const Runge_Kutta_method<stages_amount, T_arg_u, T_arg_t>&) noexcept = default;
 
-    constexpr Runge_Kutta_method<stages_amount, T_arg_u, T_arg_t>&
+    Runge_Kutta_method<stages_amount, T_arg_u, T_arg_t>&
         operator=(Runge_Kutta_method<stages_amount, T_arg_u, T_arg_t>&&) noexcept = default;
 
     virtual int get_accuracy_order() const noexcept override

@@ -49,10 +49,10 @@ public:
         :   Runge_Kutta_method<stages_amount, T_arg_u, T_arg_t>{accuracy_order, butcher_table}
     { }
 
-    constexpr Runge_Kutta_method_expl<stages_amount, T_arg_u, T_arg_t>&
+    Runge_Kutta_method_expl<stages_amount, T_arg_u, T_arg_t>&
         operator=(const Runge_Kutta_method_expl<stages_amount, T_arg_u, T_arg_t>&) noexcept = default;
 
-    constexpr Runge_Kutta_method_expl<stages_amount, T_arg_u, T_arg_t>&
+    Runge_Kutta_method_expl<stages_amount, T_arg_u, T_arg_t>&
         operator=(Runge_Kutta_method_expl<stages_amount, T_arg_u, T_arg_t>&&) noexcept = default;
 
     virtual ~Runge_Kutta_method_expl() noexcept = default;

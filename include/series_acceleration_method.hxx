@@ -22,10 +22,10 @@ public:
 
     virtual ~Series_acceleration_method() noexcept = default;
 
-    constexpr Series_acceleration_method<T_arg_u, T_arg_t>&
+    Series_acceleration_method<T_arg_u, T_arg_t>&
         operator=(const Series_acceleration_method<T_arg_u, T_arg_t>&) noexcept = default;
 
-    constexpr Series_acceleration_method<T_arg_u, T_arg_t>&
+    Series_acceleration_method<T_arg_u, T_arg_t>&
         operator=(Series_acceleration_method<T_arg_u, T_arg_t>&&) noexcept = default;
 
     virtual int get_accuracy_order() const noexcept override = 0;

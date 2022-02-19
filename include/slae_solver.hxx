@@ -24,10 +24,10 @@ public:
 
     virtual ~SLAE_solver() noexcept = default;
 
-    constexpr SLAE_solver<Matrix_type, Vector_type>&
+    SLAE_solver<Matrix_type, Vector_type>&
         operator=(const SLAE_solver<Matrix_type, Vector_type>&) noexcept = default;
 
-    constexpr SLAE_solver<Matrix_type, Vector_type>&
+    SLAE_solver<Matrix_type, Vector_type>&
         operator=(SLAE_solver<Matrix_type, Vector_type>&&) noexcept = default;
 
     virtual Vector_type get_solution(const Matrix_type& matrix_slae,

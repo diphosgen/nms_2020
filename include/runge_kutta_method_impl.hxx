@@ -17,9 +17,8 @@ class Runge_Kutta_method_impl
 {
 private:
 
-    const std::experimental::propagate_const<
-        const std::unique_ptr<SNAE_solver<Vector_fixed<T_arg_u, stages_amount>>>
-        > snae_solver_ptr = nullptr;
+    std::unique_ptr<SNAE_solver<Vector_fixed<T_arg_u, stages_amount>>>
+        snae_solver_ptr = nullptr;
 
     virtual void make_increments_calculation(const std::function<T_arg_u(T_arg_u, T_arg_t)>& f_rhs,
                                              const T_arg_u& u_prev, const T_arg_t& t, const T_arg_t& dt) override
@@ -80,10 +79,10 @@ public:
             snae_solver_ptr{std::move(snae_solver_ptr)}
     { }
 
-    constexpr Runge_Kutta_method_impl<stages_amount, T_arg_u, T_arg_t>&
+    Runge_Kutta_method_impl<stages_amount, T_arg_u, T_arg_t>&
         operator=(const Runge_Kutta_method_impl<stages_amount, T_arg_u, T_arg_t>&) noexcept = default;
 
-    constexpr Runge_Kutta_method_impl<stages_amount, T_arg_u, T_arg_t>&
+    Runge_Kutta_method_impl<stages_amount, T_arg_u, T_arg_t>&
         operator=(Runge_Kutta_method_impl<stages_amount, T_arg_u, T_arg_t>&&) noexcept = default;
 
     virtual ~Runge_Kutta_method_impl() noexcept = default;

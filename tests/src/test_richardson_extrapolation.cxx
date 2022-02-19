@@ -39,7 +39,7 @@ void test_richardson_extrapolation() noexcept
         frequency = rand_frequency();
     }
 
-    auto f = [frequencies_amount, &frequencies](const T_arg_u& u, const T_arg_t& t)
+    auto f = [frequencies_amount, &frequencies](const T_arg_u& u, [[maybe_unused]] const T_arg_t& t)
         noexcept -> T_arg_u
     {
         T_arg_u f_rhs(frequencies_amount, {{0.0, 0.0}});

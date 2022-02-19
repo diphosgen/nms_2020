@@ -101,9 +101,9 @@ public:
 
 private:
 
-    const Table_2d<T_elems> a_table{};
-    const Table_1d<T_elems> c_table{};
-    const Table_1d<T_elems> b_table{};
+    Table_2d<T_elems> a_table{};
+    Table_1d<T_elems> c_table{};
+    Table_1d<T_elems> b_table{};
 
     static constexpr const bool is_floating_point_math_type =
             std::is_floating_point_v<std::decay_t<T_elems>> ||

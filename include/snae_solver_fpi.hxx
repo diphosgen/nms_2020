@@ -51,8 +51,8 @@ public:
 
 private:
 
-    const T_norm precision = T_norm(0.0);
-    const int max_amount_iterations = 0;
+    T_norm precision = T_norm(0.0);
+    int max_amount_iterations = 0;
 
 };
 

@@ -237,8 +237,6 @@ static void test_SLAE_solver_Gauss_5() noexcept
 
     Vector_fixed<Matrix_fixed<double, matrix_size, matrix_size>, system_size> v = solver->get_solution(m, v_rhs);
 
-    Vector_fixed<Matrix_fixed<double, matrix_size, matrix_size>, system_size> v_error = v_exact - v;
-
     constexpr double error_max = 1.0e-5;
     assert(max_abs(v_exact - v) < error_max);
 }

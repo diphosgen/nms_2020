@@ -90,10 +90,10 @@ public:
 
     ~Heat_conduction_equation_2d() noexcept = default;
 
-    constexpr Heat_conduction_equation_2d& operator=
+    Heat_conduction_equation_2d& operator=
         (const Heat_conduction_equation_2d<lbc_x, rbc_x, lbc_y, rbc_y, T>&) noexcept = default;
 
-    constexpr Heat_conduction_equation_2d& operator=
+    Heat_conduction_equation_2d& operator=
         (Heat_conduction_equation_2d<lbc_x, rbc_x, lbc_y, rbc_y, T>&&) noexcept = default;
 
     Regular_grid_2d<T> get_initial_conditions_grid() const noexcept
@@ -134,30 +134,30 @@ public:
 
 private:
 
-    const Initial_conditions_function init_conditions{};
+    Initial_conditions_function init_conditions{};
 
-    const Function_lbc_x function_lbc_x{};
-    const Function_rbc_x function_rbc_x{};
-    const Function_lbc_y function_lbc_y{};
-    const Function_rbc_y function_rbc_y{};
+    Function_lbc_x function_lbc_x{};
+    Function_rbc_x function_rbc_x{};
+    Function_lbc_y function_lbc_y{};
+    Function_rbc_y function_rbc_y{};
 
-    const Source_function source{};
+    Source_function source{};
 
-    const int grid_steps_amount_x = 0;
-    const int grid_steps_amount_y = 0;
+    int grid_steps_amount_x = 0;
+    int grid_steps_amount_y = 0;
 
-    const int grid_nodes_amount_x{};
-    const int grid_nodes_amount_y{};
+    int grid_nodes_amount_x{};
+    int grid_nodes_amount_y{};
 
-    const T lbc_x_coordinate = T(0.0);
-    const T rbc_x_coordinate = T(1.0);
-    const T lbc_y_coordinate = T(0.0);
-    const T rbc_y_coordinate = T(1.0);
+    T lbc_x_coordinate = T(0.0);
+    T rbc_x_coordinate = T(1.0);
+    T lbc_y_coordinate = T(0.0);
+    T rbc_y_coordinate = T(1.0);
 
-    const T grid_spatial_step_x{};
-    const T grid_spatial_step_y{};
+    T grid_spatial_step_x{};
+    T grid_spatial_step_y{};
 
-    const T thermal_diffusivity = T(1.0);
+    T thermal_diffusivity = T(1.0);
 
     Regular_grid_2d<T> get_rhs_ode_system
         (const Regular_grid_2d<T>& grid_solution, const T& t) const noexcept

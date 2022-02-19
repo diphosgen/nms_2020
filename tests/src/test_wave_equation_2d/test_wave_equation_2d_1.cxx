@@ -59,20 +59,20 @@ void test_wave_equation_2D_1() noexcept
     using RKM = Classic_fourth_order_method<Regular_grid_2d<Grid_variable>, double>;
 
     auto eigenvalue_harmonic_factor_x = [](const int harmonic_number)
-        constexpr noexcept -> double
+        noexcept -> double
     {
         return double(harmonic_number);
     };
 
     auto eigenvalue_harmonic_factor_y = [](const int harmonic_number)
-        constexpr noexcept -> double
+        noexcept -> double
     {
         return double(harmonic_number);
     };
 
     auto basis_function_x = [coordinate_length_x,&eigenvalue_harmonic_factor_x]
                             (const double x, const int harmonic_number)
-        constexpr noexcept -> double
+        noexcept -> double
     {
         const double eigenvalue_factor = eigenvalue_harmonic_factor_x(harmonic_number);
         return std::sin(M_PI * eigenvalue_factor * x / coordinate_length_x);
@@ -80,7 +80,7 @@ void test_wave_equation_2D_1() noexcept
 
     auto basis_function_y = [coordinate_length_y,&eigenvalue_harmonic_factor_y]
                             (const double y, const int harmonic_number)
-        constexpr noexcept -> double
+        noexcept -> double
     {
         const double eigenvalue_factor = eigenvalue_harmonic_factor_y(harmonic_number);
         return std::sin(M_PI * eigenvalue_factor * y / coordinate_length_y);
@@ -145,27 +145,27 @@ void test_wave_equation_2D_1() noexcept
         return res;
     };
 
-    auto function_lbc_x = [](const double y, const double t) noexcept -> double
+    auto function_lbc_x = []([[maybe_unused]] const double y, [[maybe_unused]] const double t) noexcept -> double
     {
         return 0.0;
     };
 
-    auto function_rbc_x = [](const double y, const double t) noexcept -> double
+    auto function_rbc_x = []([[maybe_unused]] const double y, [[maybe_unused]] const double t) noexcept -> double
     {
         return 0.0;
     };
 
-    auto function_lbc_y = [](const double x, const double t) noexcept -> double
+    auto function_lbc_y = []([[maybe_unused]] const double x, [[maybe_unused]] const double t) noexcept -> double
     {
         return 0.0;
     };
 
-    auto function_rbc_y = [](const double x, const double t) noexcept -> double
+    auto function_rbc_y = []([[maybe_unused]] const double x, [[maybe_unused]] const double t) noexcept -> double
     {
         return 0.0;
     };
 
-    auto source = [](const double x, const double y, const double t) noexcept -> double
+    auto source = []([[maybe_unused]] const double x, [[maybe_unused]] const double y, [[maybe_unused]] const double t) noexcept -> double
     {
         return 0.0;
     };
