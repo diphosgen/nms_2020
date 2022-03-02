@@ -33,49 +33,6 @@
 					<Add option="-std=c++17" />
 					<Add option="-g" />
 					<Add option="-Werror=vla" />
-					<Add option="-fdiagnostics-show-option" />
-					<Add option="-Wno-div-by-zero" />
-					<Add option="-Wuninitialized" />
-					<Add option="-Wstack-protector" />
-					<Add option="-Wtype-limits" />
-					<Add option="-Wimplicit-fallthrough" />
-					<Add option="-Wmisleading-indentation" />
-					<Add option="-Wswitch" />
-					<Add option="-Wswitch-bool" />
-					<Add option="-Wswitch-unreachable" />
-					<Add option="-Wint-in-bool-context" />
-					<Add option="-Wunused-parameter" />
-					<Add option="-Wunused-variable" />
-					<Add option="-Wunused-value" />
-					<Add option="-Wunused" />
-					<Add option="-Wpointer-arith" />
-					<Add option="-Wcast-qual" />
-					<Add option="-Wmissing-field-initializers" />
-					<Add option="-Wmissing-noreturn" />
-					<Add option="-Wlong-long" />
-					<Add option="-Wdisabled-optimization" />
-					<Add option="-Wchar-subscripts" />
-					<Add option="-Wcomment" />
-					<Add option="-Wformat" />
-					<Add option="-Wformat-overflow" />
-					<Add option="-Wformat-security" />
-					<Add option="-Wformat-signedness" />
-					<Add option="-Wmissing-braces" />
-					<Add option="-Wsequence-point" />
-					<Add option="-Wwrite-strings" />
-					<Add option="-Wmissing-format-attribute" />
-					<Add option="-Wnormalized=nfkc" />
-					<Add option="-Wpacked" />
-					<Add option="-Winvalid-pch" />
-					<Add option="-Wvariadic-macros" />
-					<Add option="-Wunsafe-loop-optimizations" />
-					<Add option="-Wduplicated-branches" />
-					<Add option="-Wduplicated-cond" />
-					<Add option="-Wtrampolines" />
-					<Add option="-Wlogical-op" />
-					<Add option="-Wlogical-not-parentheses" />
-					<Add option="-Wno-aggressive-loop-optimizations" />
-					<Add option="-Wvector-operation-performance" />
 					<Add directory="include" />
 					<Add directory="tasks/include" />
 					<Add directory="include/runge_kutta_methods" />
@@ -115,56 +72,7 @@
 					<Add option="-Wall" />
 					<Add option="-std=c++17" />
 					<Add option="-Werror=vla" />
-					<Add option="-fdiagnostics-show-option" />
-					<Add option="-Wno-div-by-zero" />
-					<Add option="-Wuninitialized" />
-					<Add option="-Wstack-protector" />
-					<Add option="-Wtype-limits" />
-					<Add option="-Wimplicit-fallthrough" />
-					<Add option="-Wmisleading-indentation" />
-					<Add option="-Wswitch" />
-					<Add option="-Wswitch-bool" />
-					<Add option="-Wswitch-unreachable" />
-					<Add option="-Wint-in-bool-context" />
-					<Add option="-Wunused-parameter" />
-					<Add option="-Wunused-variable" />
-					<Add option="-Wunused-value" />
-					<Add option="-Wunused" />
-					<Add option="-Wpointer-arith" />
-					<Add option="-Wcast-qual" />
-					<Add option="-Wmissing-field-initializers" />
-					<Add option="-Wmissing-noreturn" />
-					<Add option="-Wlong-long" />
-					<Add option="-Wdisabled-optimization" />
-					<Add option="-Wchar-subscripts" />
-					<Add option="-Wcomment" />
-					<Add option="-Wformat" />
-					<Add option="-Wformat-overflow" />
-					<Add option="-Wformat-security" />
-					<Add option="-Wformat-signedness" />
-					<Add option="-Wmissing-braces" />
-					<Add option="-Wsequence-point" />
-					<Add option="-Wwrite-strings" />
-					<Add option="-Wmissing-format-attribute" />
-					<Add option="-Wnormalized=nfkc" />
-					<Add option="-Wpacked" />
-					<Add option="-Winvalid-pch" />
-					<Add option="-Wvariadic-macros" />
-					<Add option="-Wunsafe-loop-optimizations" />
-					<Add option="-Wduplicated-branches" />
-					<Add option="-Wduplicated-cond" />
-					<Add option="-Wtrampolines" />
-					<Add option="-Wlogical-op" />
-					<Add option="-Wlogical-not-parentheses" />
-					<Add option="-Wno-aggressive-loop-optimizations" />
-					<Add option="-Wvector-operation-performance" />
 					<Add option="-funroll-loops" />
-					<Add option="-fvariable-expansion-in-unroller" />
-					<Add option="-fprefetch-loop-arrays" />
-					<Add option="-freorder-blocks-and-partition" />
-					<Add option="-fno-cprop-registers" />
-					<Add option="-funswitch-loops" />
-					<Add option="-funsafe-loop-optimizations" />
 					<Add option="-march=native" />
 					<Add option="-mtune=native" />
 					<Add option="-DNDEBUG" />
