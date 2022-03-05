@@ -35,9 +35,10 @@ public:
     }
 
     constexpr Vector_fixed(const int data_size, const T& initial_value) noexcept
-        :   vector_data{std::array<T, capacity>{}.fill(initial_value)}
     {
         assert(data_size == capacity);
+
+        this->vector_data.fill(initial_value);
     }
 
     constexpr Vector_fixed(const T (&data)[capacity]) noexcept

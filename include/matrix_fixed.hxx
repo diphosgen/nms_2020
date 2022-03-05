@@ -50,14 +50,14 @@ public:
     constexpr Matrix_fixed(int constr_cols_amount,
                            int constr_rows_amount,
                            const T& initial_value) noexcept
-        :   matrix_data{std::array<T, container_size>{}.fill(initial_value)}
     {
         assert(constr_rows_amount == rows_amount);
         assert(constr_cols_amount == cols_amount);
+
+        this->matrix_data.fill(initial_value);
     }
 
     constexpr Matrix_fixed(const T (&data)[rows_amount][cols_amount]) noexcept
-        :   matrix_data(container_size)
     {
         for (int i = 0; i < cols_amount; ++i) {
             for (int j = 0; j < rows_amount; ++j) {
